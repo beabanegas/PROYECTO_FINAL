@@ -1,0 +1,6 @@
+flight_details.csv
+flight_delays.csv
+proyecto_final.venv/
+.venv/
+__pycache__/
+.ipynb_checkpoints/
