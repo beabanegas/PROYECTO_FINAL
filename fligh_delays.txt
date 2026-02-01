@@ -1,0 +1,17 @@
+COSAS A LIMPIAR:
+
+FL_DATE (str) -> convertir a fecha
+AIRLINE_CODE (str) -> OK
+FL_NUMBER (int64) -> OK
+ORIGIN (str) -> OK
+CRS_DEP_TIME (int64) -> convertir a hora (HH:MM)
+DEP_DELAY (float64) -> OK (minutos)
+ARR_DELAY (float64) -> OK (minutos)
+CANCELLED (float64) -> convertir a boolean / int (0–1)
+CANCELLATION_CODE (str) -> OK
+DIVERTED (float64) -> convertir a boolean / int (0–1)
+DELAY_DUE_CARRIER (float64) -> OK (minutos)
+DELAY_DUE_WEATHER (float64) -> OK (minutos)
+DELAY_DUE_NAS (float64) -> OK (minutos)
+DELAY_DUE_SECURITY (float64) -> OK (minutos)
+DELAY_DUE_LATE_AIRCRAFT (float64) -> OK (minutos)

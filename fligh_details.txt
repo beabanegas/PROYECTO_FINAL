@@ -1,0 +1,37 @@
+COSAS A LIMPIAR:
+
+FL_DATE (str) → convertir a fecha
+AIRLINE_CODE (str) → OK
+FL_NUMBER (int64) → OK
+ORIGIN (str) → OK
+DEST (str) → OK
+CRS_DEP_TIME (int64) → convertir a hora (HH:MM)
+AIRLINE (str) → OK
+AIRLINE_DOT (str) → OK
+DOT_CODE (int64) → OK
+ORIGIN_CITY (str) → OK
+DEST_CITY (str) → OK
+DEP_TIME (float64) → convertir a hora (HH:MM) (manteniendo nulos)
+TAXI_OUT (float64) → OK (minutos)
+WHEELS_OFF (float64) → convertir a hora (HH:MM)
+WHEELS_ON (float64) → convertir a hora (HH:MM)
+TAXI_IN (float64) → OK (minutos)
+CRS_ARR_TIME (int64) → convertir a hora (HH:MM)
+ARR_TIME (float64) → convertir a hora (HH:MM)
+CRS_ELAPSED_TIME (float64) → OK (minutos)
+ELAPSED_TIME (float64) → OK (minutos)
+AIR_TIME (float64) → OK (minutos)
+DISTANCE (float64) → OK
+
+PORCENTAJE DE NULOS
+
+DEP_TIME            2.58
+TAXI_OUT            2.62
+WHEELS_OFF          2.62
+WHEELS_ON           2.66
+TAXI_IN             2.66
+ARR_TIME            2.66
+ELAPSED_TIME        2.87
+AIR_TIME            2.87
+
+--> Parecen tener todos relación ya que los % son bastante parecidos. Habrá que justificar el motivo de estos nulos.
