@@ -107,16 +107,28 @@ En algunos casos, cuando no se tenía claro cómo abordar determinados ejercicio
 - Revisión de estructura, tipos de datos, valores nulos y duplicados.
 - Selección de vuelos con origen **ATL (Aeropuerto de Atlanta)** para reducir el volumen y mejorar la manejabilidad de los datos.
 
-### 2. Limpieza y normalización
+- ### 2. Funciones creadas durante el análisis
+  - **eda_preliminar(df)**  
+  Función de análisis exploratorio inicial que permite obtener una primera visión del dataset.  
+  Muestra una muestra aleatoria de registros, las dimensiones del conjunto de datos, la información de tipos de datos, el porcentaje de valores nulos, el número de duplicados y las frecuencias de las variables categóricas.  
+  Se utiliza para validar la estructura del dataset antes de iniciar la limpieza y transformación de datos.
+
+  - **clean_flights_df(df)**  
+  Función de limpieza y normalización de datos aplicada al dataset de vuelos.  
+  Convierte la fecha del vuelo a formato datetime, normaliza los indicadores de cancelación y desvío a valores binarios, transforma las columnas horarias al formato `"HH:MM"` y tipa correctamente las variables de tiempo en minutos.  
+  Su objetivo es dejar el dataset en un formato consistente y reutilizable para el análisis posterior y la creación de KPIs.
+
+
+### 3. Limpieza y normalización
 - Eliminación de columnas redundantes o sin valor analítico.
 - Reordenación de columnas para mejorar la legibilidad.
 - Normalización de tipos de datos mediante funciones reutilizables.
 
-### 3. Creación de variables derivadas
+### 4. Creación de variables derivadas
 - Generación de KPIs operativos, temporales y de puntualidad.
 - Segmentación de retrasos y creación de métricas de cumplimiento operativo.
 
-### 4. Control de versiones
+### 5. Control de versiones
 - Uso de entorno virtual y estructura organizada del proyecto.
 - Control de versiones mediante Git y GitHub.
 
