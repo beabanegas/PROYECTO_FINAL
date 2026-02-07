@@ -36,3 +36,36 @@
 - **`DELAY_DUE_NAS`**: Minutos de retraso atribuibles al sistema de control aéreo (NAS).
 - **`DELAY_DUE_SECURITY`**: Minutos de retraso atribuibles a seguridad.
 - **`DELAY_DUE_LATE_AIRCRAFT`**: Minutos de retraso atribuibles a llegada tardía del avión en un vuelo anterior.
+
+## Variables del dataset (creadas por usuario para el análisis de la BBDD y creación de KPIs):
+
+## Variables derivadas para KPIs:
+
+- **YEAR**: Año extraído de `FL_DATE`. Útil para filtros y agregaciones anuales.
+- **QUARTER**: Trimestre (1–4) extraído de `FL_DATE`. Útil para análisis trimestral.
+- **MONTH**: Mes (1–12) extraído de `FL_DATE`. Útil para series temporales mensuales.
+- **WEEKDAY**: Día de la semana extraído de `FL_DATE` (Monday, Tuesday, etc.). Útil para analizar patrones por día.
+- **IS_CANCELLED**: Indicador booleano (True/False) derivado de `CANCELLED` (1/0). Se usa para excluir cancelaciones en KPIs de puntualidad y retrasos.
+- **IS_DIVERTED**: Indicador booleano (True/False) derivado de `DIVERTED` (1/0). Se usa para KPIs de vuelos desviados y filtros operativos.
+- **IS_ON_TIME_ARR**: Indicador booleano (True/False) que marca si el vuelo llegó en hora:
+  - `ARR_DELAY <= 15` y `IS_CANCELLED = False`.
+- **IS_DELAYED_ARR**: Indicador booleano (True/False) que marca si el vuelo llegó con retraso:
+  - `ARR_DELAY > 15` y `IS_CANCELLED = False`.
+- **DELAY_BUCKET**: Segmentación del retraso en llegada (`ARR_DELAY`) en tramos (solo para vuelos no cancelados):
+  - `Early (<0)`: llegada adelantada
+  - `0-15`: llegada en hora
+  - `16-30`: retraso moderado
+  - `31-60`: retraso alto
+  - `>60`: retraso severo  
+  Se usa para gráficos de distribución de retrasos (p. ej. apilado 100%).
+- **SCHED_DIFF_MIN**: Diferencia en minutos entre duración real y duración programada:
+  - `SCHED_DIFF_MIN = ELAPSED_TIME - CRS_ELAPSED_TIME`  
+  Valores positivos indican que el vuelo tardó más de lo previsto; valores negativos, menos de lo previsto.
+- **CRS_DEP_HOUR**: Hora (0–23) extraída de `CRS_DEP_TIME` (formato "HH:MM"). Útil para análisis por hora de salida.
+- **TIME_BLOCK**: Franja horaria basada en `CRS_DEP_HOUR`:
+  - `Noche` (00:00–05:59)
+  - `Mañana` (06:00–11:59)
+  - `Mediodía` (12:00–17:59)
+  - `Tarde` (18:00–23:59)  
+  Útil para comparar volumen y puntualidad por franja horaria.
+
