@@ -117,4 +117,37 @@ En algunos casos, cuando no se tenía claro cómo abordar determinados ejercicio
 - Segmentación de retrasos y creación de métricas de cumplimiento operativo.
 
 ### 4. Control de versiones
-- Uso de entorno virtual y est
+- Uso de entorno virtual y estructura organizada del proyecto.
+- Control de versiones mediante Git y GitHub.
+
+---
+
+## 📈 Resultados y Análisis
+
+El análisis permitió identificar el impacto del año 2020 en la operativa aérea, así como la recuperación progresiva en los años posteriores. Se observaron diferencias significativas en la puntualidad entre aerolíneas y franjas horarias, destacando la mañana como la franja más puntual y la tarde como la más problemática.
+
+El desglose de retrasos por causa mostró que los factores operativos imputables a la aerolínea y el efecto arrastre de aeronaves retrasadas concentran la mayor parte de los minutos de retraso. Estos resultados fueron validados mediante contrastes estadísticos (ANOVA).
+
+---
+
+## ✅ Conclusiones
+
+- La puntualidad aérea está fuertemente condicionada por factores operativos.
+- La franja horaria es un elemento determinante en el retraso de llegada.
+- Las cancelaciones son menos frecuentes que los retrasos y se deben principalmente a decisiones operativas y condiciones meteorológicas.
+- El retraso en la salida es el principal predictor del retraso en la llegada.
+
+---
+
+## 🔮 Próximos Pasos
+
+- Mejorar el enfoque del informe final mediante un esquema previo del análisis.
+- Profundizar en el análisis estadístico por aerolínea.
+- Desarrollar un dashboard más avanzado para el seguimiento de KPIs.
+
+---
+
+## ✒️ Autora
+
+- **Beatriz Banegas**
+- Proyecto desarrollado como parte del curso de **Data Analytics**.
