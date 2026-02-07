@@ -1,6 +1,6 @@
 # PROYECTO_FINAL_VUELOS
 
-## Variables del dataset
+## Variables del dataset:
 
 - **`FL_DATE`**: Fecha del vuelo.
 - **`AIRLINE_CODE`**: Código de la aerolínea que opera el vuelo.
