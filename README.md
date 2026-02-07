@@ -107,7 +107,7 @@ En algunos casos, cuando no se tenía claro cómo abordar determinados ejercicio
 - Revisión de estructura, tipos de datos, valores nulos y duplicados.
 - Selección de vuelos con origen **ATL (Aeropuerto de Atlanta)** para reducir el volumen y mejorar la manejabilidad de los datos.
 
-- ### 2. Funciones creadas durante el análisis
+### 2. Funciones creadas durante el análisis
   - **eda_preliminar(df)**  
   Función de análisis exploratorio inicial que permite obtener una primera visión del dataset.  
   Muestra una muestra aleatoria de registros, las dimensiones del conjunto de datos, la información de tipos de datos, el porcentaje de valores nulos, el número de duplicados y las frecuencias de las variables categóricas.  
@@ -117,7 +117,6 @@ En algunos casos, cuando no se tenía claro cómo abordar determinados ejercicio
   Función de limpieza y normalización de datos aplicada al dataset de vuelos.  
   Convierte la fecha del vuelo a formato datetime, normaliza los indicadores de cancelación y desvío a valores binarios, transforma las columnas horarias al formato `"HH:MM"` y tipa correctamente las variables de tiempo en minutos.  
   Su objetivo es dejar el dataset en un formato consistente y reutilizable para el análisis posterior y la creación de KPIs.
-
 
 ### 3. Limpieza y normalización
 - Eliminación de columnas redundantes o sin valor analítico.
