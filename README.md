@@ -1,80 +1,81 @@
-# 📊 PROYECTO FINAL  
-## Análisis de Cancelaciones y Retrasos en Vuelos Comerciales
+# PROYECTO FINAL: Análisis de Cancelaciones y Retrasos en Vuelos Comerciales
 
 ---
 
-## 📖 Descripción del Proyecto
+## Descripción del Proyecto
 
-Este proyecto tiene como objetivo analizar las **cancelaciones y los retrasos en vuelos comerciales**, utilizando datos reales del sector aéreo. A través del estudio de dos bases de datos con información complementaria, se busca comprender el comportamiento operativo de las aerolíneas y los factores que influyen en la puntualidad de los vuelos.
+Este proyecto tiene como objetivo analizar las **cancelaciones y los retrasos en vuelos comerciales**, utilizando datos reales del sector aéreo. A partir del estudio de dos bases de datos complementarias, se busca comprender el comportamiento operativo de las aerolíneas y los factores que influyen en la puntualidad de los vuelos.
 
-El análisis se centra en la identificación de patrones temporales, las principales causas de retrasos y cancelaciones, así como las relaciones existentes entre distintas variables operativas del vuelo.
+El análisis se centra en la identificación de patrones temporales, el estudio de las principales causas de retrasos y cancelaciones, y la relación entre distintas variables operativas del vuelo. El proyecto combina análisis exploratorio en Python con una capa final de análisis visual mediante un dashboard interactivo.
 
 ---
 
-## 🗂️ Bases de Datos Utilizadas
+## Bases de Datos Utilizadas
 
 El proyecto se apoya en dos bases de datos principales en formato CSV, extraídas de la plataforma Kaggle, que comparten una estructura común y permiten realizar un análisis conjunto:
 
 - **Base de datos de vuelos** (`flight_details.csv`)  
-  Contiene información general de cada vuelo, como la fecha, aerolínea, número de vuelo, aeropuerto de origen y destino, horarios programados y reales, tiempos de taxi, duración del vuelo y distancia recorrida.
+  Contiene información general de cada vuelo: fecha, aerolínea, número de vuelo, aeropuerto de origen y destino, horarios programados y reales, tiempos de taxi, duración del vuelo y distancia recorrida.
 
 - **Base de datos de retrasos y cancelaciones** (`flight_delays.csv`)  
-  Incluye información específica sobre incidencias, como el estado del vuelo (cancelado o no), códigos de cancelación y el desglose de los retrasos según su causa (operativa de la aerolínea, condiciones meteorológicas, sistema nacional del espacio aéreo, seguridad y retrasos por aeronave).
+  Incluye información específica sobre incidencias operativas: estado del vuelo (cancelado o no), códigos de cancelación y desglose de los retrasos según su causa (operativa de la aerolínea, meteorología, sistema nacional del espacio aéreo, seguridad y llegada tardía de la aeronave).
 
-Estas bases de datos permiten analizar no solo si un vuelo se retrasa o se cancela, sino también **el motivo y la magnitud del retraso**.
+Estas bases permiten analizar no solo si un vuelo se retrasa o se cancela, sino también **el motivo y la magnitud del retraso**.
 
 ---
 
-## 🎯 Objetivos del Análisis
+## Objetivos del Análisis
 
 Los principales objetivos de este proyecto son:
 
-- Analizar la frecuencia de **cancelaciones y retrasos** en los vuelos.
+- Analizar la frecuencia de **cancelaciones y retrasos**.
 - Identificar las **principales causas de los retrasos**.
 - Estudiar la evolución temporal de las incidencias.
 - Comparar el comportamiento operativo entre aerolíneas.
-- Extraer conclusiones que ayuden a comprender los factores que afectan a la puntualidad aérea.
+- Construir métricas que permitan evaluar la puntualidad y el cumplimiento del horario.
+- Facilitar un análisis flexible mediante visualización interactiva.
 
 ---
 
-## 🛠️ Herramientas y Tecnologías Empleadas
+## Herramientas y Tecnologías Empleadas
 
 Para el desarrollo del proyecto se han utilizado las siguientes herramientas:
 
 - **Python** como lenguaje principal de análisis.
 - **Pandas y NumPy** para la limpieza, transformación y análisis de datos.
-- **Matplotlib y Seaborn** para la creación de visualizaciones gráficas.
+- **Matplotlib y Seaborn** para la creación de visualizaciones.
 - **Jupyter Notebook** como entorno de trabajo y documentación del análisis.
+- **Microsoft Excel** para la construcción del dashboard interactivo y el análisis visual final.
 - **Git y GitHub** para el control de versiones y la gestión del proyecto.
 
-En algunos casos, cuando no se tenía claro cómo abordar determinados ejercicios, se contó con el apoyo de personas del entorno y el uso de **ChatGPT** como herramienta de consulta, especialmente en la fase de exploración de datos y creación de gráficos.
+En algunos casos, cuando no se tenía claro cómo abordar determinados ejercicios, se contó con el apoyo del entorno y con el uso de **ChatGPT** como herramienta de consulta, especialmente durante la fase de exploración de datos y creación de gráficos.
 
 ---
 
-## 🗂️ Estructura del Proyecto y Documentos Generados
+## Estructura del Proyecto y Documentos Generados
 
 El proyecto se organiza en distintos notebooks y archivos que reflejan las fases del análisis y permiten seguir de forma clara la evolución del trabajo:
 
 - **1.0_Detalles_Vuelos.ipynb**  
-  Exploración inicial del dataset de vuelos y revisión de su estructura.
+  Exploración inicial del dataset de vuelos.
 
 - **1.1_Detalles_Vuelos_Limpieza.ipynb**  
   Limpieza y normalización de la base de datos de vuelos.
 
 - **1.2_Detalles_Vuelos_Limpieza_ATL.ipynb**  
-  Filtrado del dataset para analizar únicamente los vuelos con origen ATL (Aeropuerto de Atlanta).
+  Filtrado del dataset para vuelos con origen ATL.
 
 - **2.0_Incidencias_Vuelos.ipynb**  
-  Exploración inicial del dataset de incidencias, retrasos y cancelaciones.
+  Exploración inicial del dataset de retrasos y cancelaciones.
 
 - **2.1_Incidencias_Vuelos_Limpieza.ipynb**  
-  Limpieza y tipado de la base de datos de incidencias.
+  Limpieza y tipado del dataset de incidencias.
 
 - **2.2_Incidencias_Vuelos_Limpieza_ATL.ipynb**  
   Filtrado de incidencias para vuelos con origen ATL.
 
 - **3.0_Vuelos_Union.ipynb**  
-  Unión de las bases de datos de vuelos e incidencias en un único dataset.
+  Unión de ambas bases de datos.
 
 - **3.1_Vuelos_Union_Análisis.ipynb**  
   Análisis exploratorio, creación de KPIs, visualizaciones y análisis estadístico.
@@ -82,31 +83,31 @@ El proyecto se organiza en distintos notebooks y archivos que reflejan las fases
 ### Archivos de datos
 
 - **flight_details.csv / flight_delays.csv**  
-  Bases de datos originales utilizadas como punto de partida.
+  Bases de datos originales.
 
 - **flight_details_atl.csv / flight_delays_atl.csv**  
-  Subconjuntos filtrados con vuelos cuyo aeropuerto de origen es ATL.
+  Subconjuntos filtrados por origen ATL.
 
 - **flights_final_atl.csv**  
-  Dataset final limpio y enriquecido, utilizado para el análisis y el dashboard.
+  Dataset final limpio y enriquecido, utilizado tanto para el análisis como para el dashboard.
 
 ### Otros archivos
 
 - **dictionary.html**  
-  Diccionario de datos original con la descripción de las variables.
+  Diccionario de datos original.
 
 - **src/**  
-  Carpeta que contiene funciones reutilizables empleadas durante la limpieza y el análisis.
+  Funciones reutilizables empleadas durante la limpieza y el análisis.
 
 - **proyecto_final.venv**  
-  Entorno virtual utilizado para gestionar las dependencias del proyecto.
+  Entorno virtual del proyecto.
 
 - **README.md**  
-  Documento descriptivo del proyecto, metodología y conclusiones.
+  Documento descriptivo del proyecto.
 
 ---
 
-## 📊 Variables del Dataset
+## Variables del Dataset
 
 ### Variables originales
 
@@ -120,100 +121,121 @@ El proyecto se organiza en distintos notebooks y archivos que reflejan las fases
 - **DEST_CITY**: Ciudad del aeropuerto de destino.  
 - **CRS_DEP_TIME**: Hora de salida programada del vuelo.  
 - **DEP_TIME**: Hora real de salida del vuelo.  
-- **DEP_DELAY**: Diferencia en minutos entre la hora real y la programada de salida.  
-- **TAXI_OUT**: Minutos desde que el avión abandona la puerta hasta el despegue.  
+- **DEP_DELAY**: Diferencia en minutos entre la hora real y la hora programada de salida.  
+- **TAXI_OUT**: Minutos transcurridos desde que el avión abandona la puerta hasta el despegue.  
 - **WHEELS_OFF**: Hora de despegue del avión.  
 - **WHEELS_ON**: Hora de aterrizaje del avión.  
-- **TAXI_IN**: Minutos desde el aterrizaje hasta la llegada a la puerta.  
+- **TAXI_IN**: Minutos transcurridos desde el aterrizaje hasta la llegada a la puerta.  
 - **CRS_ARR_TIME**: Hora de llegada programada del vuelo.  
 - **ARR_TIME**: Hora real de llegada del vuelo.  
-- **ARR_DELAY**: Diferencia en minutos entre la hora real y la programada de llegada.  
+- **ARR_DELAY**: Diferencia en minutos entre la hora real y la hora programada de llegada.  
 - **CANCELLED**: Indicador de vuelo cancelado (1 = cancelado, 0 = no cancelado).  
 - **CANCELLATION_CODE**: Código del motivo de la cancelación.  
 - **DIVERTED**: Indicador de vuelo desviado (1 = desviado, 0 = no desviado).  
-- **CRS_ELAPSED_TIME**: Duración programada del vuelo (minutos).  
-- **ELAPSED_TIME**: Duración real del vuelo (minutos).  
-- **AIR_TIME**: Tiempo total de vuelo en el aire (minutos).  
-- **DISTANCE**: Distancia del vuelo (millas).  
-- **DELAY_DUE_CARRIER**: Retraso atribuible a la aerolínea.  
-- **DELAY_DUE_WEATHER**: Retraso atribuible a meteorología.  
-- **DELAY_DUE_NAS**: Retraso atribuible al sistema de control aéreo.  
-- **DELAY_DUE_SECURITY**: Retraso atribuible a seguridad.  
-- **DELAY_DUE_LATE_AIRCRAFT**: Retraso atribuible a llegada tardía de la aeronave.
+- **CRS_ELAPSED_TIME**: Duración programada del vuelo, en minutos.  
+- **ELAPSED_TIME**: Duración real del vuelo, en minutos.  
+- **AIR_TIME**: Tiempo total de vuelo en el aire, en minutos.  
+- **DISTANCE**: Distancia del vuelo en millas.  
+- **DELAY_DUE_CARRIER**: Minutos de retraso atribuibles a la operativa de la aerolínea.  
+- **DELAY_DUE_WEATHER**: Minutos de retraso atribuibles a condiciones meteorológicas.  
+- **DELAY_DUE_NAS**: Minutos de retraso atribuibles al sistema nacional del espacio aéreo (NAS).  
+- **DELAY_DUE_SECURITY**: Minutos de retraso atribuibles a controles de seguridad.  
+- **DELAY_DUE_LATE_AIRCRAFT**: Minutos de retraso atribuibles a la llegada tardía de la aeronave.
 
 ### Variables creadas durante el análisis (KPIs)
 
-- **YEAR, QUARTER, MONTH, WEEKDAY**: Variables temporales derivadas de `FL_DATE`.  
-- **IS_CANCELLED, IS_DIVERTED**: Indicadores booleanos derivados.  
-- **IS_ON_TIME_ARR**: Vuelo llegado en hora (`ARR_DELAY ≤ 15`).  
-- **IS_DELAYED_ARR**: Vuelo llegado con retraso (`ARR_DELAY > 15`).  
-- **DELAY_BUCKET**: Segmentación del retraso en tramos.  
-- **SCHED_DIFF_MIN**: Diferencia entre duración real y programada del vuelo.  
-- **CRS_DEP_HOUR**: Hora de salida programada.  
-- **TIME_BLOCK**: Franja horaria (Noche, Mañana, Mediodía, Tarde).
+- **YEAR, QUARTER, MONTH, WEEKDAY**
+- **IS_CANCELLED, IS_DIVERTED**
+- **IS_ON_TIME_ARR**
+- **IS_DELAYED_ARR**
+- **DELAY_BUCKET**
+- **SCHED_DIFF_MIN**
+- **CRS_DEP_HOUR**
+- **TIME_BLOCK**
+
+Estas variables permiten analizar la puntualidad desde una perspectiva temporal y operativa.
 
 ---
 
-## 🔄 Proceso de Trabajo
+## Proceso de Trabajo
 
 ### 1. Preparación y unificación de los datos
-- Carga de las bases de datos en Jupyter Notebook.
-- Unión de los datasets en un único archivo final.
-- Revisión de estructura, tipos de datos, valores nulos y duplicados.
-- Selección de vuelos con origen **ATL (Aeropuerto de Atlanta)** para reducir el volumen y mejorar la manejabilidad de los datos.
+- Carga de datos.
+- Unión de datasets.
+- Revisión de tipos, nulos y duplicados.
+- Filtrado de vuelos con origen **ATL (Aeropuerto de Atlanta)** para mejorar la manejabilidad del análisis.
 
-### 2. Funciones creadas durante el análisis
-  - **eda_preliminar(df)**  
-  Función de análisis exploratorio inicial que permite obtener una primera visión del dataset.  
-  Muestra una muestra aleatoria de registros, las dimensiones del conjunto de datos, la información de tipos de datos, el porcentaje de valores nulos, el número de duplicados y las frecuencias de las variables categóricas.  
-  Se utiliza para validar la estructura del dataset antes de iniciar la limpieza y transformación de datos.
-
-  - **clean_flights_df(df)**  
-  Función de limpieza y normalización de datos aplicada al dataset de vuelos.  
-  Convierte la fecha del vuelo a formato datetime, normaliza los indicadores de cancelación y desvío a valores binarios, transforma las columnas horarias al formato `"HH:MM"` y tipa correctamente las variables de tiempo en minutos.  
-  Su objetivo es dejar el dataset en un formato consistente y reutilizable para el análisis posterior y la creación de KPIs.
+### 2. Funciones creadas
+- **eda_preliminar(df)**: análisis exploratorio inicial.
+- **clean_flights_df(df)**: limpieza, normalización y tipado de variables.
 
 ### 3. Limpieza y normalización
-- Eliminación de columnas redundantes o sin valor analítico.
-- Reordenación de columnas para mejorar la legibilidad.
-- Normalización de tipos de datos mediante funciones reutilizables.
+- Eliminación de columnas redundantes.
+- Normalización de variables temporales.
+- Reordenación del dataset.
 
 ### 4. Creación de variables derivadas
-- Generación de KPIs operativos, temporales y de puntualidad.
-- Segmentación de retrasos y creación de métricas de cumplimiento operativo.
+- KPIs de puntualidad y retraso.
+- Segmentación por franjas horarias y tramos de retraso.
 
 ### 5. Control de versiones
-- Uso de entorno virtual y estructura organizada del proyecto.
-- Control de versiones mediante Git y GitHub.
+- Uso de entorno virtual.
+- Gestión del proyecto con Git y GitHub.
+
+### 6. Creación del dashboard final
+- Diseño y construcción de un **dashboard interactivo en Excel** a partir del dataset final limpio y enriquecido.
+- Definición de KPIs clave y visualizaciones orientadas al análisis operativo.
+- Implementación de filtros dinámicos para el análisis por aerolínea, periodo temporal y franja horaria.
+- Integración del dashboard como herramienta final de análisis y apoyo a la toma de decisiones.
 
 ---
 
-## 📈 Resultados y Análisis
+## Resultados y Análisis
 
-El análisis permitió identificar el impacto del año 2020 en la operativa aérea, así como la recuperación progresiva en los años posteriores. Se observaron diferencias significativas en la puntualidad entre aerolíneas y franjas horarias, destacando la mañana como la franja más puntual y la tarde como la más problemática.
+El análisis exploratorio realizado en Python permitió identificar patrones relevantes en los datos, como el impacto del año 2020 en la operativa aérea, diferencias significativas de puntualidad entre aerolíneas y franjas horarias, y la concentración del retraso en causas operativas imputables a la aerolínea y a la llegada tardía de aeronaves.
 
-El desglose de retrasos por causa mostró que los factores operativos imputables a la aerolínea y el efecto arrastre de aeronaves retrasadas concentran la mayor parte de los minutos de retraso. Estos resultados fueron validados mediante contrastes estadísticos (ANOVA).
+Estos resultados fueron contrastados mediante análisis estadístico (ANOVA), sirviendo como base conceptual para el diseño del dashboard final.
 
 ---
 
-## ✅ Conclusiones
+## Dataset y Dashboard de Análisis de Incidencias de Vuelos (ATL)
+
+El proyecto culmina con la construcción de un **dashboard interactivo en Excel**, alimentado por el dataset final limpio y enriquecido.
+
+El objetivo del dashboard **no es extraer conclusiones generales**, sino permitir un análisis flexible y dinámico del comportamiento de cada aerolínea de forma individual, en función de los filtros seleccionados.
+
+---
+
+## Nota metodológica clave
+
+El análisis realizado en **Visual Studio Code (Python)** y el análisis visual del **dashboard en Excel** **no se sustituyen**, sino que **se complementan**:
+
+- El análisis en Python permite comprender el dataset, validar hipótesis y construir métricas.
+- El dashboard permite explorar esos resultados de forma interactiva y contextualizada.
+
+Ambas partes forman un único flujo de análisis.
+
+---
+
+## Conclusiones
 
 - La puntualidad aérea está fuertemente condicionada por factores operativos.
-- La franja horaria es un elemento determinante en el retraso de llegada.
-- Las cancelaciones son menos frecuentes que los retrasos y se deben principalmente a decisiones operativas y condiciones meteorológicas.
+- La franja horaria influye de forma significativa en los retrasos de llegada.
+- Las cancelaciones son menos frecuentes que los retrasos y responden principalmente a decisiones operativas y condiciones meteorológicas.
 - El retraso en la salida es el principal predictor del retraso en la llegada.
+- El análisis combinado (Python + dashboard) permite una comprensión más completa del comportamiento operativo.
 
 ---
 
-## 🔮 Próximos Pasos
+## Próximos Pasos
 
-- Mejorar el enfoque del informe final mediante un esquema previo del análisis.
-- Profundizar en el análisis estadístico por aerolínea.
-- Desarrollar un dashboard más avanzado para el seguimiento de KPIs.
+- Profundizar en el análisis estadístico para el resto de aeropuertos.
+- Incorporar análisis comparativos entre aeropuertos.
+- Estudiar medidas para disminuir los retrasos por causas internas del propio aeropuerto. 
 
 ---
 
-## ✒️ Autora
+## Autora
 
-- **Beatriz Banegas**
-- Proyecto desarrollado como parte del curso de **Data Analytics**.
+- **Beatriz Banegas**  
+- Proyecto desarrollado como parte del curso de **Data Analytics**
