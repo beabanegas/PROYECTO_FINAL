@@ -51,6 +51,61 @@ En algunos casos, cuando no se tenía claro cómo abordar determinados ejercicio
 
 ---
 
+## 🗂️ Estructura del Proyecto y Documentos Generados
+
+El proyecto se organiza en distintos notebooks y archivos que reflejan las fases del análisis y permiten seguir de forma clara la evolución del trabajo:
+
+- **1.0_Detalles_Vuelos.ipynb**  
+  Exploración inicial del dataset de vuelos y revisión de su estructura.
+
+- **1.1_Detalles_Vuelos_Limpieza.ipynb**  
+  Limpieza y normalización de la base de datos de vuelos.
+
+- **1.2_Detalles_Vuelos_Limpieza_ATL.ipynb**  
+  Filtrado del dataset para analizar únicamente los vuelos con origen ATL (Aeropuerto de Atlanta).
+
+- **2.0_Incidencias_Vuelos.ipynb**  
+  Exploración inicial del dataset de incidencias, retrasos y cancelaciones.
+
+- **2.1_Incidencias_Vuelos_Limpieza.ipynb**  
+  Limpieza y tipado de la base de datos de incidencias.
+
+- **2.2_Incidencias_Vuelos_Limpieza_ATL.ipynb**  
+  Filtrado de incidencias para vuelos con origen ATL.
+
+- **3.0_Vuelos_Union.ipynb**  
+  Unión de las bases de datos de vuelos e incidencias en un único dataset.
+
+- **3.1_Vuelos_Union_Análisis.ipynb**  
+  Análisis exploratorio, creación de KPIs, visualizaciones y análisis estadístico.
+
+### Archivos de datos
+
+- **flight_details.csv / flight_delays.csv**  
+  Bases de datos originales utilizadas como punto de partida.
+
+- **flight_details_atl.csv / flight_delays_atl.csv**  
+  Subconjuntos filtrados con vuelos cuyo aeropuerto de origen es ATL.
+
+- **flights_final_atl.csv**  
+  Dataset final limpio y enriquecido, utilizado para el análisis y el dashboard.
+
+### Otros archivos
+
+- **dictionary.html**  
+  Diccionario de datos original con la descripción de las variables.
+
+- **src/**  
+  Carpeta que contiene funciones reutilizables empleadas durante la limpieza y el análisis.
+
+- **proyecto_final.venv**  
+  Entorno virtual utilizado para gestionar las dependencias del proyecto.
+
+- **README.md**  
+  Documento descriptivo del proyecto, metodología y conclusiones.
+
+---
+
 ## 📊 Variables del Dataset
 
 ### Variables originales
